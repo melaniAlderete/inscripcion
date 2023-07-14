@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+          <form class="register-form" id="signForm">
+            <input type="text" placeholder="Nombres*"/>
+            <input type="text" placeholder="Apellidos*"/>
+            <input type="text" placeholder="Correo*"/>
+            <label>Tipo*</label>
+            <select class="form-select">
+              <option value="1">V</option>
+              <option value="2">E</option>
+            </select>
+            <input type="number" placeholder="Cedula*"/>
+            <input type="password" placeholder="Clave*"/>
+            <input type="password" placeholder="Confirmar clave*"/>
+            <button>Crear cuenta</button>
+            <p class="message">Tienes una cuenta registrada? <a href="#" id="logButton">Inicia sesión</a></p>
+          </form>
+          <form class="login-form" id="logForm">
+            <input type="text" placeholder="Correo"/>
+            <input type="password" placeholder="Clave"/>
+            <button>Iniciar sesión</button>
+            <p class="message">No tienes una cuenta? <a href="#" id="signButton">Regístrate Aquí</a></p>
+          </form>
+        </div>
+      </div>
+      <script src="./javascript/utility.js"></script>
+</body>
+</html>

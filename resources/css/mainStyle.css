@@ -1,0 +1,233 @@
+body {background-color: white;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;          
+  }
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper .sidebar{
+    background: #000217;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .wrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+      border-radius: 50%;
+    margin: 0 auto;
+  }
+  
+  .wrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+  }
+  
+  .wrapper .sidebar .profile p{
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+  }
+  
+  .wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #0242cc;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+  }
+  
+  .wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+  }
+  
+   
+  
+  .wrapper .sidebar ul li a:hover,
+  .wrapper .sidebar ul li a.active{
+    color: white;
+  
+    background:#0242cc;
+
+  }
+  
+  .wrapper .sidebar ul li a:hover .icon,
+  .wrapper .sidebar ul li a.active .icon{
+    color: white;
+  }
+  
+  .wrapper .sidebar ul li a:hover:before,
+  .wrapper .sidebar ul li a.active:before{
+    display: block;
+  }
+  :root {
+    --primary-color: #0242cc;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Global Stylings */
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  .width-50 {
+    width: 50%;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+
+  .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+  }
+  
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+    z-index: -1;
+  }
+  
+  .progress {
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .progress-step {
+    width: 4.7rem;
+    height: 2.1875rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+  
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .progress-step-active {
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+  }
+
+  .form {
+    width: 60%;
+    margin-left: 28%;
+    margin-top: 70px;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 2rem;
+  }
+  
+  .form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+  }
+  
+  .form-step-active {
+    display: block;
+  }
+  
+  .input-group {
+    margin: 2rem 0;
+  }
+  
+  .form-select {
+    width: -webkit-fill-available;
+    height: 2.5rem;
+  }
+
+  @keyframes animate {
+    from {
+      transform: scale(1, 0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+
+  .btns-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+  }
+
+  
